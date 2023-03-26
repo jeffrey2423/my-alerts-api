@@ -1,0 +1,36 @@
+{
+  "BASE_URL": "/api",
+  "SERVER_PORT": 9000,
+  "ENVIROMENT": "DEV",
+  "DATABASE": {
+    "DEV": {
+      "PARAMS": {
+        "user": "postgres",
+        "host": "localhost",
+        "database": "my-alerts",
+        "password": "root",
+        "port": 5432
+      }
+    },
+    "PROD": {
+      "PARAMS": {
+        "user": "",
+        "host": "",
+        "database": "",
+        "password": "",
+        "port": 5432,
+        "ssl": { "rejectUnauthorized": false }
+      }
+    }
+  },
+  "application": {
+    "cors": {
+      "server": [
+        {
+          "origin": "*",
+          "credentials": true
+        }
+      ]
+    }    
+  }
+}
